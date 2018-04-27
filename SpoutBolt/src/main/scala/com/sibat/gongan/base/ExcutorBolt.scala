@@ -19,8 +19,8 @@ class ExcutorBolt extends IRichBolt {
     override def execute(t: Tuple){
       Try{
         val st = t.getValue(0).toString()
-        println("消费："+t)
-        _collector.emit(new Values(t))
+        println("消费："+st)
+        _collector.emit(new Values(st))
       }
     }
 
