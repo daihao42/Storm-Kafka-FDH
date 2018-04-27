@@ -1,4 +1,4 @@
-package com.sibat.gongan.base
+package com.daihao.zep.base
 /****
 ***/
 import org.apache.storm.topology.IRichBolt
@@ -10,8 +10,7 @@ import scala.language.implicitConversions
 import org.apache.storm.tuple.{Fields, Tuple, Values}
 import scala.util.Try
 
-//class ExcutorBolt extends BaseRichBolt {
-class ExcutorBolt extends IRichBolt {
+class SecondBolt extends IRichBolt {
     var _context: TopologyContext = _
     var _conf: java.util.Map[_, _] = _
     var _collector: OutputCollector = _
@@ -19,7 +18,7 @@ class ExcutorBolt extends IRichBolt {
     override def execute(t: Tuple){
       Try{
         val st = t.getValue(0).toString()
-        println("消费："+st)
+        println("二级消费："+st)
         _collector.emit(new Values(st))
       }
     }

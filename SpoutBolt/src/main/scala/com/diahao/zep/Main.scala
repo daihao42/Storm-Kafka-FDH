@@ -1,12 +1,12 @@
-package com.sibat.gongan
+package com.daihao.zep
 
 import org.apache.storm.Config
 import org.apache.storm.topology.TopologyBuilder
 import org.apache.storm.LocalCluster
 
-import com.sibat.gongan.base._
-import com.sibat.gongan.util._
-import com.sibat.gongan.imp._
+import com.daihao.zep.base._
+import com.daihao.zep.util._
+import com.daihao.zep.imp._
 
 object Main extends IPropertiesTrait{
 

@@ -1,4 +1,4 @@
-package com.sibat.gongan.imp
+package com.daihao.zep.imp
 
 import java.util.Properties
 import java.io.FileInputStream

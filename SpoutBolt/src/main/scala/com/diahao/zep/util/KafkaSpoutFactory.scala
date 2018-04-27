@@ -1,4 +1,4 @@
-package com.sibat.gongan.util
+package com.daihao.zep.util
 
 import org.apache.storm.kafka.BrokerHosts
 import org.apache.storm.kafka.ZkHosts
@@ -8,7 +8,7 @@ import org.apache.storm.kafka.KafkaSpout
 import org.apache.storm.spout.SchemeAsMultiScheme
 import org.apache.storm.kafka.StringScheme
 
-import com.sibat.gongan.imp._
+import com.daihao.zep.imp._
 
 object KafkaSpoutFactory extends IPropertiesTrait{
 
