@@ -18,10 +18,10 @@ class ExcutorBolt extends IRichBolt {
 
     override def execute(t: Tuple){
       Try{
-        println(t.getValue(0).toString())
+        val st = t.getValue(0).toString()
+        println("消费："+t)
+        _collector.emit(new Values(t))
       }
-//      println(t.getString(1))
-      _collector.emit(new Values())
     }
 
     def declareOutputFields(declarer: OutputFieldsDeclarer) {
