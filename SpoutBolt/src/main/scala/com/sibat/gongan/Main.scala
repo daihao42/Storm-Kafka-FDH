@@ -21,7 +21,7 @@ object Main extends IPropertiesTrait{
 
       builder.setSpout("consumer",KafkaSpoutFactory.getSpout(INPUTTOPICS),1)
       builder.setBolt("executor", new ExcutorBolt, 3).shuffleGrouping("consumer")
-      builder.setBolt("producer", new ExcutorBolt, 3).shuffleGrouping("executor")
+      builder.setBolt("producer", KafkaBoltFactory.getBolt("test"),3).shuffleGrouping("executor")
 
       cluster.submitTopology("test", conf, builder.createTopology())
 
