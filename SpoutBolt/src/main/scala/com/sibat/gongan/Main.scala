@@ -19,9 +19,9 @@ object Main extends IPropertiesTrait{
 
       val cluster = new LocalCluster()
 
-      builder.setSpout("kafka",KafkaSpoutFactory.getSpout(INPUTTOPICS),1)
-      builder.setBolt("exclaim", new ExcutorBolt, 3)
-             .shuffleGrouping("kafka")
+      builder.setSpout("consumer",KafkaSpoutFactory.getSpout(INPUTTOPICS),1)
+      builder.setBolt("executor", new ExcutorBolt, 3).shuffleGrouping("consumer")
+      builder.setBolt("producer", new ExcutorBolt, 3).shuffleGrouping("executor")
 
       cluster.submitTopology("test", conf, builder.createTopology())
 

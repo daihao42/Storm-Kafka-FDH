@@ -18,11 +18,6 @@ libraryDependencies ++= Seq(
   //"org.apache.kafka" % "kafka-clients" % "0.9.0.1",
   "org.apache.kafka" % "kafka-clients" % "0.8.2.2",
   "org.apache.kafka" %% "kafka" % "0.8.2.2",
-  "org.apache.hbase" % "hbase-client" % "0.96.1.1-cdh5.0.2" ,
-  "org.apache.hbase" % "hbase-common" % "0.96.1.1-cdh5.0.2" ,
-  "org.apache.hbase" % "hbase-server" % "0.96.1.1-cdh5.0.2" ,
-  "org.elasticsearch" % "elasticsearch" % "2.4.2",
-  "org.postgresql"   %  "postgresql"  % "9.4-1201-jdbc41"
 )
 
 
