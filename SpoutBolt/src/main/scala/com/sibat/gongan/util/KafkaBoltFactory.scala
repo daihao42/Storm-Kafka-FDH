@@ -1,9 +1,9 @@
 package com.sibat.gongan
 
 import java.util.Properties
-import org.apache.storm.kafka.KafkaBolt
-import org.apache.storm.kafka.DefaultTopicSelector
-import org.apache.storm.kafka.FieldNameBasedTupleToKafkaMapper
+import org.apache.storm.kafka.bolt.KafkaBolt
+import org.apache.storm.kafka.bolt.selector.DefaultTopicSelector
+import org.apache.storm.kafka.bolt.mapper.FieldNameBasedTupleToKafkaMapper
 
 import com.sibat.gongan.imp._
 
@@ -12,7 +12,7 @@ object KafkaBoltFactory extends IPropertiesTrait{
 
   def getBolt(topic:String) = {
     //set producer properties.
-    Properties props = new Properties()
+    val props = new Properties()
     props.put("bootstrap.servers", KAFKABROKERS)
     props.put("acks", "1")
     props.put("key.serializer", "org.apache.kafka.common.serialization.StringSerializer");

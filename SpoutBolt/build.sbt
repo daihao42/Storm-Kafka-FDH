@@ -17,7 +17,7 @@ libraryDependencies ++= Seq(
   "org.apache.storm" % "storm-kafka" % "1.0.2",
   //"org.apache.kafka" % "kafka-clients" % "0.9.0.1",
   "org.apache.kafka" % "kafka-clients" % "0.8.2.2",
-  "org.apache.kafka" %% "kafka" % "0.8.2.2",
+  "org.apache.kafka" %% "kafka" % "0.8.2.2"
 )
 
 
