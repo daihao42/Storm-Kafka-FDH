@@ -15,7 +15,8 @@ object KafkaBoltFactory extends IPropertiesTrait{
     val props = new Properties()
     props.put("bootstrap.servers", KAFKABROKERS)
     props.put("acks", "1")
-    props.put("serializer.class", "org.apache.kafka.common.serialization.StringSerializer");
+    props.put("serializer.class", "org.apache.kafka.common.serialization.StringSerializer")
+    props.put("value.serializer", "org.apache.kafka.common.serialization.StringSerializer")
     new KafkaBolt().withProducerProperties(props)
                    .withTopicSelector(new DefaultTopicSelector(topic))
                    .withTupleToKafkaMapper(new FieldNameBasedTupleToKafkaMapper());
