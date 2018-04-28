@@ -1,4 +1,4 @@
-package com.diahao.zep.base
+package com.daihao.zep.base
 /****
 ***/
 import org.apache.storm.topology.IRichBolt
